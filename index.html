@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lavender — Adult Boutique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <div class="logo">Lavender</div>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <button class="cart" onclick="toggleCart()">Cart <span id="count">0</span></button>
+    </nav>
+    <div class="hero-copy">
+      <p class="eyebrow">Private adult boutique · 18+</p>
+      <h1>Little things,<br>made personal.</h1>
+      <p>A discreet, soft-lavender storefront for intimate adult products and photography.</p>
+      <a class="button" href="#shop">Enter the shop</a>
+    </div>
+  </header>
+
+  <main id="shop">
+    <section class="intro">
+      <p class="eyebrow">Collections</p>
+      <h2>Choose your category</h2>
+    </section>
+
+    <section class="category">
+      <div class="category-head">
+        <h3>Panties</h3>
+        <span>7 pieces</span>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="placeholder">1 day</div><h4>One Day</h4><p>Personalized adult item</p><button onclick="add('Panties — One Day')">Add to cart</button></article>
+        <article class="card"><div class="placeholder">2 days</div><h4>Two Days</h4><p>Personalized adult item</p><button onclick="add('Panties — Two Days')">Add to cart</button></article>
+        <article class="card"><div class="placeholder">3 days</div><h4>Three Days</h4><p>Personalized adult item</p><button onclick="add('Panties — Three Days')">Add to cart</button></article>
+        <article class="card"><div class="placeholder">4 days</div><h4>Four Days</h4><p>Personalized adult item</p><button onclick="add('Panties — Four Days')">Add to cart</button></article>
+        <article class="card"><div class="placeholder">5 days</div><h4>Five Days</h4><p>Personalized adult item</p><button onclick="add('Panties — Five Days')">Add to cart</button></article>
+        <article class="card"><div class="placeholder">6 days</div><h4>Six Days</h4><p>Personalized adult item</p><button onclick="add('Panties — Six Days')">Add to cart</button></article>
+        <article class="card"><div class="placeholder">7 days</div><h4>One Week</h4><p>Personalized adult item</p><button onclick="add('Panties — One Week')">Add to cart</button></article>
+      </div>
+    </section>
+
+    <section class="category">
+      <div class="category-head">
+        <h3>Pictures</h3>
+        <span>Adult photography · 18+</span>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="placeholder">A4</div><h4>Selfie Prints</h4><p>Adult photography print · A4</p><button onclick="add('Pictures — Selfie Print A4')">Add to cart</button></article>
+        <article class="card"><div class="placeholder">10×15</div><h4>Limited Edition</h4><p>Numbered collectible print · 10×15 cm</p><button onclick="add('Pictures — Limited Edition 10×15')">Add to cart</button></article>
+        <article class="card"><div class="placeholder">15×20</div><h4>Limited Edition</h4><p>Numbered collectible print · 15×20 cm</p><button onclick="add('Pictures — Limited Edition 15×20')">Add to cart</button></article>
+        <article class="card"><div class="placeholder">Custom</div><h4>Custom Request</h4><p>Personalized adult photography request</p><button onclick="add('Pictures — Custom Request')">Add to cart</button></article>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <p class="eyebrow">Private & discreet</p>
+      <h2>Made with care.</h2>
+      <p>Every order is handled privately and packaged discreetly. Adult customers only.</p>
+    </section>
+  </main>
+
+  <aside id="cartPanel" class="cart-panel">
+    <button class="close" onclick="toggleCart()">×</button>
+    <h2>Your cart</h2>
+    <div id="cartItems"></div>
+    <p id="empty">Your cart is empty.</p>
+    <button class="checkout" onclick="alert('Checkout placeholder — connect a payment provider later.')">Checkout</button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
